@@ -4,38 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
     
     <link href="./style.css" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet"> 
     
     <title>Reservia</title>
 </head>
 <body>
 
     <header>
-        <div class="logo">
+        <div class="logo__wrap">
+            <figure>
+                <img class="logo" src="./images/logo/Reservia.svg" alt="Reservia logo">
+            </figure>
             <nav>
                 <ul>
                     <li><a href="#"> Hébergements</a></li>
                     <li><a href="#">Activités</a></li>
-                    <li><a href="#">S'inscrire</a></li>
+                    <li><a href="#" class="inscription">S'inscrire</a></li>
                 </ul>
             </nav>
         </div> 
     </header>
 
     <main>
-
-        <div class="cta">
+        <section class="cta">
             <div class="cta__title">
-                <h3>Trouvez votre hébergement pour des vacances de rêve</h3>
-                <h2>En plein centre ville ou en pleine nature</h2>
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre ville ou en pleine nature</p>
             </div>
             <div class="cta__search">
-                <input type="search" name="" id="">
+                <div class="cta__search-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <input type="search" name="search" id="search" placeholder="Marseille, France">
                 <input type="submit" value="Rechercher">
             </div>
             <div class="cta__filters">
@@ -48,7 +53,7 @@
             <div class="cta__alert">
                 <p>Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
-        </div> <!-- cta -->
+        </section> <!-- cta -->
 
         <div class="resultats">
             <div class="resultats-ville">
