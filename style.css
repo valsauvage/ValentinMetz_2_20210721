@@ -1,13 +1,15 @@
-:root {
-    --primary-color: #0065FC;
-    --secondary-color: #DEEBFF;
-    --tertiary-color: #F2F2F2;
-}
-
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: white;
+}
+
+a:visited, a:active {
+    color: black;
+}
+a:hover, a:focus {
+    color: #0065FC;
 }
 
 main {
@@ -56,16 +58,16 @@ header {
     padding-top: 25px;
     font-weight: 700;
 }
-.logo__wrap a:focus {
-    border-top: 2px solid var(--primary-color);
-    color: var(--primary-color);
+.logo__wrap a:hover, .logo__wrap a:focus{
+    border-top: 2px solid #0065FC;
+    color: #0065FC;
 
 }
 .logo__wrap a:active {
-    color: var(--primary-color);
+    color: #0065FC;
 }
-.inscription {
-    color: var(--primary-color);
+a.inscription {
+    color: #0065FC;
 }
 
 /* SECTION CTA + SEARCH BAR */
@@ -83,7 +85,7 @@ header {
     width: 12px;
     padding: 0.6em 1em 0.6em 1em;
     font-weight: 700;
-    background-color: var(--tertiary-color);
+    background-color: #F2F2F2;
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
 }
@@ -92,7 +94,7 @@ header {
     margin-right: -5px;
     padding: 0.6em 1em 0.6em 1em;
     font-weight: 700;
-    border: 1px solid var(--tertiary-color)
+    border: 1px solid #F2F2F2;
 }
 .cta__search input[type="search"]:focus {
     outline: none;
@@ -100,7 +102,7 @@ header {
 
 .cta__search input[type="submit"] {
     height: 3em;
-    background-color: var(--primary-color);
+    background-color: #0065FC;
     color: white;
     border: none;
     border-top-right-radius: 1em;
@@ -116,6 +118,10 @@ header {
     filter: brightness(130%);
 }
 
+.cta__filters button {
+    border: 2px solid #DADADA;
+    border-radius: 1em;
+}
 
 /* SECTION RESULTATS */
 
@@ -128,14 +134,14 @@ header {
 }
 
 .resultats-ville {
-    background-color: var(--tertiary-color);
+    background-color: #F2F2F2;
     padding: 3em;
     margin-right: 3em;
     border-radius: 1em;
     width: 70%;
 }
 .resultats-pop {
-    background-color: var(--tertiary-color);
+    background-color: #F2F2F2;
     padding: 3em;
     border-radius: 1em;
     width: 30%;
@@ -164,17 +170,68 @@ header {
 
 .resultats-ville__card, .resultats-pop__card, .activites__card, .activites__card-big {
     background-color: white;
-    padding: 1em;
+    padding: 0.5em;
+    margin: 0;
     margin-bottom: 2em;
     border-radius: 1em;
     box-shadow: 2px 2px 30px -5px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.resultats-ville__card:hover, .resultats-pop__card:hover {
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    translate: 0px -4px;
+
 }
 .resultats-ville__card {
-    width: 27%;
+    width: 30%;
 }
 
 .activites__card-big, .activites__two-cards {
     width: 22%;
+}
+
+.price-low {
+    font-weight: bold;
+}
+
+.resultats-ville__card figure {
+    margin:0;
+}
+.resultats-ville__card img {
+    max-width: 100%;
+    min-height: 10rem;
+}
+
+.resultats-ville__card-img {
+    overflow: hidden;
+    margin: 0;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    max-height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resultats-ville__card-txt {
+    display: flex;
+    flex-direction: column;
+    height: 36%;
+    justify-content: space-between;
+    padding: 1em;
+}
+.resultats-ville__card-txt p, .resultats-ville__card-txt h4, .price, .price-low {
+    margin: 0.3em;
+}
+
+.etoiles {
+    display: flex;
+    flex-direction: row;
+}
+.fa-star {
+    color: #0065FC;
+}
+.star-empty {
+    color: #F2F2F2;
 }
 
 /* SECTION ACTIVITES */
@@ -192,7 +249,7 @@ header {
 /* FOOTER */
 
 footer {
-    background-color: var(--tertiary-color);
+    background-color: #F2F2F2;
     padding: 3em;
 }
 
