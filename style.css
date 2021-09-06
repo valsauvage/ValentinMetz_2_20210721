@@ -43,25 +43,17 @@ h2 {
 header {
     padding: 0em 3em 0em 0em;
 }
-nav ul {
-    margin: 0;
-    padding: 0;
-}
 
 .logo {
     max-height: 48px;
 }
-.logo__wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+nav {
+    display: grid;
+    grid-template-columns: 9fr 1fr 1fr 1fr;
 }
 
-.logo__wrap ul, .mobile-menu ul {
-    display: flex;
-}
-
-.logo__wrap li, .mobile-menu li {
+.nav-link,
+.nav-inscription {
     list-style-type: none;
     padding: 0 1em;
     margin: 0 1em;
@@ -69,44 +61,16 @@ nav ul {
     padding-top: 25px;
     border-top: 2px solid transparent;
 }
-.logo__wrap li:last-child {
+.nav-inscription {
     margin-right: 0;
     font-weight: bold;
 }
-.logo__wrap li:hover,
-.logo__wrap li:focus {
+.nav-link:hover,
+.nav-inscription:hover {
     border-top: 2px solid #0065fc;
     color: #0065fc;
 }
-.logo__wrap a:active, .mobile-menu a:active {
-    color: #0065fc;
-}
-a.inscription {
-    color: #0065fc;
-}
-
-/* MOBILE MENU  */
-.mobile-menu {
-    display: none;
-    width: 100%;
-}
-.mobile-menu ul {
-    padding: 0;
-    width: 100%;
-}
-.mobile-menu ul li {
-    text-align: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    padding-bottom: 1em;
-    border-bottom: 3px solid #F2F2F2;
-    border-top: none;
-}
-.mobile-menu ul li:hover, .mobile-menu ul li:focus {
-    border-color: #0065fc;
-}
-.mobile-menu ul li:hover a, .mobile-menu ul li:focus a{
+.nav-inscription a {
     color: #0065fc;
 }
 
@@ -445,19 +409,42 @@ footer a {
 /* MEDIA QUERRIES */
 
 @media only screen and (max-width: 375px) {
-
     header {
         padding: 0;
     }
+
+    nav {
+        grid-template-columns: 1fr 1fr;
+    }
+    .nav-inscription {
+        border-top: none;
+        text-align: center;
+        padding-top: 30px;
+        margin-left: 0;
+        width: 100%;
+    }
+    .nav-inscription:hover {
+        border-top: none;
+    }
     .nav-link {
-        display: none;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 1em;
+        border-bottom: 3px solid #f2f2f2;
+        border-top: none;
+        order: 2;
     }
-    .logo__wrap figure {
-        margin-left: 20px;
+
+    .nav-link:hover {
+        border-top: none;
+        border-color: #0065fc;
     }
-    .mobile-menu {
-        display: flex;
+    .nav-link:hover a {
+        color: #0065fc;
     }
+
     main {
         padding: 0;
     }
@@ -535,7 +522,8 @@ footer a {
         grid-template-columns: 1fr;
         grid-template-rows: 200px;
     }
-    .activites__card-big, .activites__card {
+    .activites__card-big,
+    .activites__card {
         grid-row: span 1;
         max-height: 200px;
     }
