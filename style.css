@@ -367,6 +367,7 @@ nav {
 }
 .activites__card img {
     max-width: 100%;
+    min-width: 100%;
 }
 .activites__card__text {
     padding-left: 1em;
@@ -408,7 +409,75 @@ footer a {
 
 /* MEDIA QUERRIES */
 
-@media only screen and (max-width: 375px) {
+/* TABLETTE  */
+
+@media only screen and (max-width: 1136px) {
+    main {
+        padding: 0;
+    }
+    .cta {
+        padding: 0em 3em 0em 3em;
+    }
+
+    /* RESULTATS  */
+    .resultats {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .resultats-ville {
+        background-color: white;
+        width: 100%;
+        margin: 0;
+        padding: 2em;
+        order: 2;
+    }
+    .resultats-ville__wrap {
+        width: 100%;
+        justify-content: center;
+        gap: 2%;
+    }
+    .resultats__title {
+        margin-bottom: 1em;
+    }
+    .resultats-ville__card {
+        width: 48%;
+        margin-bottom: 1em;
+    }
+
+    /* RESULTATS POPULAIRES */
+    .resultats-pop {
+        order: 1;
+        width: 100%;
+        border-radius: 0;
+    }
+    .resultats-pop__wrap {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2%;
+    }
+    .resultats-pop__wrap a {
+        width: 48%;
+        margin-bottom: 1em;
+    }
+
+    /* ACTIVITES  */
+    .activites {
+        padding: 2em;
+    }
+    .activites__wrap {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px;
+    }
+    .activites__card-big,
+    .activites__card {
+        grid-row: span 1;
+        max-height: 200px;
+    }
+}
+
+/* IPHONE 8 */
+
+@media only screen and (max-width: 480px) {
     header {
         padding: 0;
     }
@@ -490,28 +559,24 @@ footer a {
     }
 
     /* RESULTATS  */
+
     .resultats {
-        flex-direction: column;
+        margin-bottom: 0;
     }
     .resultats-ville {
-        background-color: white;
-        width: 100%;
-        margin: 0;
         padding: 1em;
-        order: 2;
-    }
-    .resultats__title {
-        margin-bottom: 1em;
     }
     .resultats-ville__card {
         width: 100%;
     }
 
     /* RESULTATS POPULAIRES */
+
     .resultats-pop {
-        order: 1;
+        padding: 1em;
+    }
+    .resultats-pop__wrap a {
         width: 100%;
-        border-radius: 0;
     }
 
     /* ACTIVITES  */
@@ -522,11 +587,7 @@ footer a {
         grid-template-columns: 1fr;
         grid-template-rows: 200px;
     }
-    .activites__card-big,
-    .activites__card {
-        grid-row: span 1;
-        max-height: 200px;
-    }
+
 
     /* FOOTER  */
     footer {
