@@ -70,6 +70,9 @@ nav {
     border-top: 2px solid #0065fc;
     color: #0065fc;
 }
+.nav-link:hover a {
+    color: #0065fc;
+}
 .nav-inscription a {
     color: #0065fc;
 }
@@ -505,15 +508,10 @@ footer a {
         border-top: none;
         order: 2;
     }
-
     .nav-link:hover {
         border-top: none;
         border-color: #0065fc;
     }
-    .nav-link:hover a {
-        color: #0065fc;
-    }
-
     main {
         padding: 0;
     }
